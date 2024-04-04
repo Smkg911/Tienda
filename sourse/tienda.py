@@ -1,3 +1,5 @@
+from producto import Producto
+
 class Tienda:
     
     
@@ -15,6 +17,12 @@ class Tienda:
     # Metodos
     ---------------------------------------------------------'''
     
+    def __init__(self):
+        self.__producto1 = Producto
+        self.__producto2 = Producto  
+        self.__producto3 = Producto  
+        self.__producto4 = Producto  
+    
     def getProducto1(self):
         return self.__producto1
     
@@ -29,3 +37,6 @@ class Tienda:
 
     def getDineroEnCaja(self): 
         return self.__dineroEnCaja
+    
+
+

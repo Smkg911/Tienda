@@ -1,4 +1,3 @@
-
 from enum import Enum 
 
 '''----------------------------------------------------------------
@@ -52,5 +51,4 @@ class Producto:
     
     def getCantidadUnidadesVendidas(self):
         return self.__cantidadUnidadesVendida
-    
-        
+
