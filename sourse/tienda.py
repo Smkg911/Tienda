@@ -2,26 +2,16 @@ from producto import Producto
 
 class Tienda:
     
-    
-    '''--------------------------------------------
-    # Atributos
-    -------------------------------------------------'''
-    
-    __producto1 = None 
-    __producto2 = None
-    __producto3 = None
-    __producto4 = None
-    __dineroEnCaja = 0.0
-    
     '''------------------------------------------------------
     # Metodos
     ---------------------------------------------------------'''
     
     def __init__(self):
-        self.__producto1 = Producto
-        self.__producto2 = Producto  
-        self.__producto3 = Producto  
-        self.__producto4 = Producto  
+        self.__producto1 = Producto("PAPELERIA", "lapiz", 500, 30, 9)
+        self.__producto2 = Producto ("PAPELERIA", "borrador", 300, 15, 5)
+        self.__producto3 = Producto ("SUPERMERCADO", "cafe", 5600, 20, 10)
+        self.__producto4 = Producto ("FARMACIA", "desinfectante", 3200, 12, 11)
+        self.__dineroEnCaja = 0
     
     def getProducto1(self):
         return self.__producto1
@@ -37,6 +27,20 @@ class Tienda:
 
     def getDineroEnCaja(self): 
         return self.__dineroEnCaja
+
+    def venderProducto(self,pNombreProducto, pCantidad):
+        if pNombreProducto == self.__producto1.__nombre:
+            self.__producto1.vender(pCantidad)
+        elif pNombreProducto == self.__producto2.__nombre:
+            self.__producto2.vender(pCantidad)
+        elif pNombreProducto == self.__producto3.__nombre:
+            self.__producto3.vender(pCantidad)
+        elif pNombreProducto == self.__producto4.__nombre:
+            self.__producto4.vender(pCantidad)
+            
+    def cuantosPapelerias(self):
+        return self.__producto1.getCantidadUnidadesVendidas() +  self.__producto2.getCantidadUnidadesVendidas()
+        
     
 
 
